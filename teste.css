@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.login-popup {
+    display: none; /* Inicialmente oculta */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Para garantir que fique sobre outros elementos */
+}
+
+.login-popup h2 {
+    margin: 0 0 10px;
+}
+
+.login-popup label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-popup input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.login-popup button {
+    margin-right: 5px;
+}

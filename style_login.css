@@ -1,0 +1,77 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cabeça{
+    background-image: url('https://i.pinimg.com/originals/d7/c6/f7/d7c6f739c55a93b2b1deccf927bddeb6.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative; /* Para o posicionamento absoluto do header */
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    position: relative; /* Para o posicionamento absoluto do header */
+}
+.cima{
+    margin-right: 200px;
+    background-color:aliceblue;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+header {
+    position: absolute; /* Permite posicionar o header sobre a imagem */
+    width: 97.42vw;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo semi-transparente */
+    color: white;
+    text-align: center; 
+} 
+.login{
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    padding: 60px;
+    border-radius: 10px;
+    outline: none;
+}
+input{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+
+}
+button{
+    width: 100%;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: blue;
+}
+.cadastro{
+    text-align: center;
+}
