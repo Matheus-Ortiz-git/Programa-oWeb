@@ -26,9 +26,9 @@ cadastro onclick function(){
 <header>
     <h1>Loja Exemplo</h1>
     <nav>
-        <a href="Front.html">Home</a>
-        <a href="carrinho.html">Carrinho</a>
-        <a href="Login.html">Login</a>
+        <a href="Front.php">Home</a>
+        <a href="carrinho.php">Carrinho</a>
+        <a href="Login.php">Login</a>
        
     </nav>
 </header>

@@ -61,7 +61,7 @@ input{
     font-size: 15px;
 
 }
-button{
+.inputSubmit{
     width: 100%;
     border-radius: 10px;
     background-color: aqua;
@@ -69,7 +69,7 @@ button{
     font-size: 15px;
     cursor: pointer;
 }
-button:hover{
+.inputSubmit:hover{
     background-color: blue;
 }
 .cadastro{

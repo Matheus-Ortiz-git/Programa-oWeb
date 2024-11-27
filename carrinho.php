@@ -13,8 +13,8 @@
     <h1>Carrinho de Compras</h1>
     <nav>
         <a href="Front.php">Home</a>
-        <a href="carrinho.html">Carrinho</a>
-        <a href="Login.html">Login</a>
+        <a href="carrinho.php">Carrinho</a>
+        <a href="Login.php">Login</a>
     </nav>
 </header>
 

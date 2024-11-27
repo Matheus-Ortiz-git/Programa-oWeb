@@ -128,6 +128,11 @@ background-color:violet;
                 </div>
                 <br><br>
                 <div class="caixa_escrita">
+                    <input type="password" name="senha" id="senha" class="escreva" required>
+                    <label for="senha" class="caixa">digite sua senha</label>
+                </div>
+                <br><br>
+                <div class="caixa_escrita">
                     <input type="text" name="email" id="email" class="escreva" required>
                     <label for="email" class="caixa">E-mail</label>
                 </div>
