@@ -3,52 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Lateral</title>
+    <title>Loja Virtual - Carrossel em Loop</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #333;
-            padding-top: 20px;
-        }
-        .sidebar a {
-            padding: 15px 20px;
-            text-decoration: none;
-            font-size: 18px;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
             color: white;
-            display: block;
+            padding: 1em;
         }
-        .sidebar a:hover {
-            background-color: #575757;
+        .header h1 {
+            margin: 0;
         }
-        .content {
-            margin-left: 260px; /* Espaço para o menu */
-            padding: 20px;
+        .login {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .item {
+            flex: 0 0 auto;
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .item img {
+            max-width: 100px;
+            height: auto;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
         }
     </style>
 </head>
 <body>
 
-<div class="sidebar">
-    <h2>Menu</h2>
-    <a href="#home">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contato">Contato</a>
-</div>
+    <div class="header">
+        <h1>Loja Virtual</h1>
+        <a href="login.html" class="login">Login</a>
+    </div>
 
-<div class="content">
-    <h1>Bem-vindo!</h1>
-    <p>Este é um exemplo de um menu lateral.</p>
-</div>
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <div class="item">
+                <img src="item1.jpg" alt="Item 1">
+                <h2>Item 1</h2>
+                <p>Descrição do Item 1</p>
+            </div>
+            <div class="item">
+                <img src="item2.jpg" alt="Item 2">
+                <h2>Item 2</h2>
+                <p>Descrição do Item 2</p>
+            </div>
+            <div class="item">
+                <img src="item3.jpg" alt="Item 3">
+                <h2>Item 3</h2>
+                <p>Descrição do Item 3</p>
+            </div>
+            <div class="item">
+                <img src="item4.jpg" alt="Item 4">
+                <h2>Item 4</h2>
+                <p>Descrição do Item 4</p>
+            </div>
+            <div class="item">
+                <img src="item1.jpg" alt="Item 1 (clone)">
+                <h2>Item 1</h2>
+                <p>Descrição do Item 1</p>
+            </div>
+            <div class="item">
+                <img src="item2.jpg" alt="Item 2 (clone)">
+                <h2>Item 2</h2>
+                <p>Descrição do Item 2</p>
+            </div>
+        </div>
+        <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const itemsToShow = 4;
+        const items = document.querySelectorAll('.item');
+        const totalItems = items.length;
+
+        function moveCarousel(direction) {
+            const carousel = document.querySelector('.carousel');
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalItems - itemsToShow;
+                carousel.style.transition = 'none';
+                const offset = -currentIndex * 320;
+                carousel.style.transform = `translateX(${offset}px)`;
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+                    moveCarousel(0);
+                }, 0);
+                return;
+            } else if (currentIndex >= totalItems - itemsToShow) {
+                currentIndex = 0;
+                carousel.style.transition = 'none';
+                const offset = -currentIndex * 320;
+                carousel.style.transform = `translateX(${offset}px)`;
+                setTimeout(() => {
+                    carousel.style.transition = 'transform 0.5s ease-in-out';
+                    moveCarousel(0);
+                }, 0);
+                return;
+            }
+
+            const offset = -currentIndex * 320;
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
 
 </body>
 </html>
