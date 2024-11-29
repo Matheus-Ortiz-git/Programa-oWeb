@@ -17,7 +17,7 @@ body {
    /* background-color: #f4f4f4;*/
 }
 header {
-    background-color:white;
+    background-color:black;
    /* background: #333;
 
     color: #fff;
@@ -35,7 +35,8 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     padding:15px;
-    background-color: yellow;
+    background-color:white;
+    border-radius: 100px;
 }
 .container {
     width: 80%;
@@ -73,6 +74,11 @@ footer {
     width: 100%;
 }
 .pesquisa{
+    width: 400px;
+    font-size: 15px;
+    padding: 5px;
+}
+.botton-pesquisa{
     font-size: 15px;
     padding: 5px;
 }
@@ -86,10 +92,11 @@ footer {
     top: 60%;
     left: 50%;
     text-align: center ;
-    background-color: blue;    
+    background-color: silver;    
 }
+
 .logotipo{
-    width: 400px;
+    width: 100px;
     height: 100px;
 }
 .header-bottom-side{
@@ -103,6 +110,7 @@ footer {
     flex-basis:50%
 }
 .header-bottom-side-left h1{
+    color: black;
     font-size: 3.2rem;
     margin-bottom:1.5rem;
 }
@@ -131,7 +139,8 @@ footer {
     justify-content:center;
 }
 .header-bottom-side-right img{
-    width: 90%;
+    width: 60%;
+    border-radius: 10px
 }
 
 </style>
@@ -179,12 +188,12 @@ function carrocel()(
 <header>
     <nav>
     <div class="parte-cima">
-            <div ><img class="logotipo" src="aesthetic.png" alt="logotipo"></div>
+            <div ><img class="logotipo" src="logotype.jpeg" alt="logotipo"></div>
         <form  action="/search" method="get">
-        <input class="pesquisa" type="text" name="query" placeholder="Digite sua pesquisa"> <button class="pesquisa" type="submit">Buscar</button>
+        <input class="pesquisa" type="text" name="query" placeholder="Digite sua pesquisa"> <button class="botton-pesquisa" type="submit">Buscar</button>
         </form>
     </div>
-        <div class="links">
+        <div>
         <a href="Front.php">Home</a>
         <a href="carrinho.php">Carrinho</a>
         <a href="Login.php">Login</a>
@@ -205,7 +214,7 @@ function carrocel()(
             </div>
             
             <div class="header-bottom-side-right">
-                <img src="http://pluspng.com/img-png/eagle-png-flying-eagle-png-image-1600.png" alt="modelo">
+                <img src="https://www.calitta.com/22696-thickbox_default/vestido-das-mulheres-branco-modelo-social-para-trabalho-curto-manga-midi.jpg" alt="modelo">
             </div>
         </div>
     </div>
