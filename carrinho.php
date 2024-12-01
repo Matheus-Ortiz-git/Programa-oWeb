@@ -10,8 +10,21 @@
 <body>
 
 <header>
-    <h1>Carrinho de Compras</h1>
+
     <nav>
+
+    <div class="parte-cima">
+            <div>
+                <a class="barra-logo" href="Front.php">
+                <img class="logotipo" src="logotype.jpeg" alt="logotipo">
+                </a>
+
+            </div>
+            <form class="barra-pesquisa"  action="/search" method="get">
+        <input class="pesquisa" type="text" name="query" placeholder="Digite sua pesquisa"> <button class="botton-pesquisa" type="submit">Buscar</button>
+    </form>
+       <div>
+
         <a href="Front.php">Home</a>
         <a href="carrinho.php">Carrinho</a>
         <a href="Login.php">Login</a>

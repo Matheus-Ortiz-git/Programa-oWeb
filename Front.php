@@ -24,12 +24,16 @@ header {
     padding: 10px 20px;
     text-align: center;*/
 }
+header  .barra{
+    padding: 15px;
+}
+
 nav {
     margin: 10px 0;
     
 }
 
-nav a {
+nav .barra {
     border: 1px solid black;
     color: black;
     margin: 0 15px;
@@ -44,6 +48,9 @@ nav a {
     overflow: hidden;
 }
 .product {
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
     background: #fff;
     border: 1px solid #ddd;
     margin: 20px;
@@ -53,13 +60,14 @@ nav a {
     box-sizing: border-box;
 }
 .product button{
-    padding: 15px;
-    align-items: right;
+    padding: 20px;
+    width: 200px;
     border-radius: 100px;
     background-color: green;
     cursor: pointer;
 }
 .product img {
+    
     max-width: 300px;
     height: 300px;
 
@@ -72,11 +80,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-.pesquisa{
-    width: 400px;
-    font-size: 15px;
-    padding: 5px;
 }
 .botton-pesquisa{
     font-size: 15px;
@@ -115,6 +118,7 @@ footer {
     margin-bottom:1.5rem;
 }
 .header-bottom-side-left p{
+    color: black;
     line-height: 1.5rem;
     margin-bottom:1.5rem;
 }
@@ -143,9 +147,119 @@ footer {
     border-radius: 10px
 }
 
+
+/*
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product button {
+  margin-top: 10px;
+}
+
+*/
+
+.barra-pesquisa {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.pesquisa {
+    height:30px;
+    width: 600px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.pesquisa:focus {
+    border-color: #007BFF;
+}
+
+.botton-pesquisa {
+    height:55px;
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    border-radius: 0 25px 25px 0;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.botton-pesquisa:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+
+
+
+
+.ver-mais {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .ver-mais:hover {
+            background-color: #0056b3;
+        }
+
+
 </style>
 
+<script>
 
+document.addEventListener("DOMContentLoaded", function(){
+     var conteudo = document.getElementById("conteudo"); 
+     var botao = document.getElementById("verMais"); 
+     if (localStorage.getItem("conteudoMostrado") === "true"){ 
+        conteudo.style.display = "block"; botao.style.display = "none";
+         }
+     });
+
+function toggleConteudo() { 
+    var conteudo = document.getElementById("conteudo"); 
+    var botao = document.querySelector(".ver-mais"); 
+    conteudo.style.display = "block"; 
+    botao.style.display = "none"; }
+   
+   </script>
 
 <!-- Isso incrivelmente nao funcionou <script>
 const cadastro = document.querySelector ("button")
@@ -187,20 +301,29 @@ function carrocel()(
 
 <header>
     <nav>
-    <div class="parte-cima">
-            <div ><img class="logotipo" src="logotype.jpeg" alt="logotipo"></div>
-        <form  action="/search" method="get">
-        <input class="pesquisa" type="text" name="query" placeholder="Digite sua pesquisa"> <button class="botton-pesquisa" type="submit">Buscar</button>
-        </form>
-    </div>
-        <div>
-        <a href="Front.php">Home</a>
-        <a href="carrinho.php">Carrinho</a>
-        <a href="Login.php">Login</a>
+
+        <a class="barra" href="Front.php">Home</a>
+        <a class="barra" href="carrinho.php">Carrinho</a>
+        <a class="barra"  href="Login.php">Login</a>
         </div>
+    </div>
+    <div class="parte-cima">
+            <div>
+                <a class="barra-logo" href="Front.php">
+                <img class="logotipo" src="logotype.jpeg" alt="logotipo">
+                </a>
+            </div>
+            <form class="barra-pesquisa"  action="/search" method="get">
+        <input class="pesquisa" type="text" name="query" placeholder="Digite sua pesquisa"> <button class="botton-pesquisa" type="submit">Buscar</button>
+    </form>
+       <div>
+
+   
+
 
     </nav>
 </header>
+<br>
     <header class="slide">  
     <div class="header-inner-content">
         <div class="header-bottom-side">
@@ -243,7 +366,59 @@ function carrocel()(
         <p>Preço: R$ 200,00</p>
         <button onclick="addToCart('Produto 3', 200)">Comprar</button>
     </div>
+
+    <div class="product">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.sG95bbAGDVftuiktgV8NFAHaMi&pid=Api&P=0&h=180" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <p>Descrição do produto 1.</p>
+        <p>Preço: R$ 100,00</p>
+        <button onclick="addToCart('Produto 1', 100)">Comprar</button>
+    </div>
+    <div class="product">
+        <img src="https://i.pinimg.com/originals/56/47/fd/5647fd69e68474332a3ba3a75cbb1d3c.jpg" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p>Descrição do produto 2.</p>
+        <p>Preço: R$ 150,00</p>
+        <button onclick="addToCart('Produto 2', 150)">Comprar</button>
+    </div>
+    <div class="product">
+        <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-lady-hand-drawn-clothes-hand-drawn-clothes-clothes-pattern-ladies-clothes-png-image_3822870.jpg" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p>Descrição do produto 3.</p>
+        <p>Preço: R$ 200,00</p>
+        <button onclick="addToCart('Produto 3', 200)">Comprar</button>
+    </div>
+    
+    <button class="ver-mais" onclick="toggleConteudo()">Ver Mais</button>
+    <div class="conteudo" id="conteudo">
+    <div class="product">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.sG95bbAGDVftuiktgV8NFAHaMi&pid=Api&P=0&h=180" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <p>Descrição do produto 1.</p>
+        <p>Preço: R$ 100,00</p>
+        <button onclick="addToCart('Produto 1', 100)">Comprar</button>
+    </div>
+    <div class="product">
+        <img src="https://i.pinimg.com/originals/56/47/fd/5647fd69e68474332a3ba3a75cbb1d3c.jpg" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p>Descrição do produto 2.</p>
+        <p>Preço: R$ 150,00</p>
+        <button onclick="addToCart('Produto 2', 150)">Comprar</button>
+    </div>
+    <div class="product">
+        <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-lady-hand-drawn-clothes-hand-drawn-clothes-clothes-pattern-ladies-clothes-png-image_3822870.jpg" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p>Descrição do produto 3.</p>
+        <p>Preço: R$ 200,00</p>
+        <button onclick="addToCart('Produto 3', 200)">Comprar</button>
+    </div>
+    </div>
 </div>
+
+
+
+
+
 
 <footer>
     <p>&copy; 2024 Loja Exemplo. Todos os direitos reservados.</p>
