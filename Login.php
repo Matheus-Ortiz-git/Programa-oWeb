@@ -1,58 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="aseet/css/style.css">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="./Trabalho/css/página/Login.css">
 
-    <style>
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    height: 100vh;
-    width: 100vw;
-}
-
-.cabeça{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoz2e4HgOHJ9okv2BthzygwSLz2d6h6xqXNg&s');
-    background-size: cover;
-    background-position: center;
-    height: 99vh;
-    width: 97.4vw;
-    position: relative; /* Para o posicionamento absoluto do header */
+</head>
+<body>
+<style>
+    .parte-cima{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 footer{
+    color:white;
+}
+.link{ color: #fff; 
+     padding: 15px;
+     margin: 0 15px; text-decoration: none;
+      font-weight: bold; 
+      border-radius: 5px; 
+      transition: background-color 0.3s, color 0.3s;
+     } 
+     .link:hover { 
+        background-color: #007bff; 
+        color: #fff; 
+    } 
 
-   /* background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    position: relative; /* Para o posicionamento absoluto do header */
+.pesquisa {
+    height:30px;
+    width: 600px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
 }
-.cima{
-    margin-right: 200px;
-    background-color:aliceblue;
-    padding: 15px;
-    text-decoration: none;
-    border-radius: 10px;
+.logotipo{
+    width: 100px;
+    height: 100px;
 }
-header{
-    position: absolute; /* Permite posicionar o header sobre a imagem */
-    width: 97.42vw;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo semi-transparente */
-    color: white;
-    text-align: center; 
-} 
-.login{
+body {
+            display: flex;
+            flex-direction: column;
+            min-height: 120vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image:url('venda.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:  center;
+        
+        }
+header, footer {
+            background-color: black;
+            padding: 1rem;
+            text-align: center;
+        }
+ main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+.login-container {
     color: white;
     background-color: black;
     position: absolute;
@@ -62,57 +77,71 @@ header{
     padding: 60px;
     border-radius: 10px;
     outline: none;
-}
-input{
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    font-size: 15px;
-}
-.inputSubmit{
-    width: 100%;
-    border-radius: 10px;
-    background-color: aqua;
-    padding: 10px;
-    font-size: 15px;
-    cursor: pointer;
-}
-.inputSubmit:hover{
-    background-color: blue;
-}
-.cadastro{
-    text-align: center;
-}
-    </style>
+        }
+.login-container h2 {
+            margin-bottom: 1rem;
+        }
+.login-container label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+.login-container input {
+            width: 250px;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+.login-container button {
+            width: 270px;
+            padding: 1rem;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+.login-container button:hover {
+            background-color: #0056b3;
+        }
+</style>
 
-</head>
-<body class="cabeça">
-    <header>
-        <h1>Loja Exemplo</h1>
-        <nav class="nav_bar">
-            <a class="cima" href="Front.php">Home</a>
-            <a class="cima" href="carrinho.php">Carrinho</a>
-            <a class="cima" href="Login.php">Login</a>
-        </nav>
-    </header>
-    
-    <form action="testLogin.php" method="POST">
-        <div class="login"> 
-            <h1>LOGIN</h1>
-            <input id="email" name="email" placeholder="Email">
-            <br><br>
-            <input type="password" name="senha" placeholder="Senha">
-            <br><br>
-            <input class="inputSubmit" type="submit" name="submit" value="enviar">
-            <br>
-            <h4 class="cadastro"><a href="formulario.php">fazer cadastro</a></h4>
+
+<header>
+    <nav>
+
+<div class="parte-cima">
+        <div>
+            <a class="barra-logo" href="Front.php">
+            <img class="logotipo" src="logotype.jpeg" alt="logotipo">
+            </a>
+
         </div>
-    </form>
+   <div>
 
+    <a class="link" href="Front.php">Home</a>
+    <a class="link" href="carrinho.php">Carrinho</a>
+    <a class="link" href="Login.php">Login</a>
+</nav>
+    </header>
+    <main>
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" placeholder="Digite seu Email" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua Senha" name="password" required>
+                <br>
+                <button type="submit">Entrar</button>
+            </form>
+            <br>
+            <a class="cadastro" href="#" class="link">Não tem uma conta? Cadastre-se aqui</a>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2024 Nome da Sua Empresa. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Loja Exemplo. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>

@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.link{ color: #fff; 
+    padding: 15px;
+    margin: 0 15px; text-decoration: none;
+     font-weight: bold; 
+     border-radius: 5px; 
+     transition: background-color 0.3s, color 0.3s;
+    } 
+    .link:hover { 
+       background-color: #007bff; 
+       color: #fff; 
+   } 
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav {
+    margin: 10px 0;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.cart {
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.parte-cima{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.logotipo{
+    width: 100px;
+    height: 100px;
+}
+header{
+    background-color: black;
+}
+.pesquisa {
+    height:30px;
+    width: 600px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+ 
+.pesquisa:focus {
+    border-color: #007BFF;
+}
+.botton-pesquisa {
+    height:55px;
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    border-radius: 0 25px 25px 0;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.botton-pesquisa:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.barra-pesquisa {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Exemplo</title>
-    <link rel="stylesheet" href="style_front.css">
+    <link rel="stylesheet" href="./Trabalho/css/index.css">
 
 </head>
 
@@ -17,30 +17,38 @@ body {
    /* background-color: #f4f4f4;*/
 }
 header {
-    background-color:black;
+    background-color: black;
    /* background: #333;
 
     color: #fff;
     padding: 10px 20px;
     text-align: center;*/
 }
-header  .barra{
-    padding: 15px;
+header nav .barra{
+    
+    padding: 10px;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    padding:15px;
+    border-radius: 100px;
+
 }
+.link{ color: #fff; 
+     padding: 15px;
+     margin: 0 15px; text-decoration: none;
+      font-weight: bold; 
+      border-radius: 5px; 
+      transition: background-color 0.3s, color 0.3s;
+     } 
+     .link:hover { 
+        background-color: #007bff; 
+        color: #fff; 
+    } 
 
 nav {
     margin: 10px 0;
     
-}
-
-nav .barra {
-    border: 1px solid black;
-    color: black;
-    margin: 0 15px;
-    text-decoration: none;
-    padding:15px;
-    background-color:white;
-    border-radius: 100px;
 }
 .container {
     width: 80%;
@@ -63,11 +71,11 @@ nav .barra {
     padding: 20px;
     width: 200px;
     border-radius: 100px;
-    background-color: green;
+    background-color: rgb(75, 75, 246);
     cursor: pointer;
 }
 .product img {
-    
+    align-items:center;
     max-width: 300px;
     height: 300px;
 
@@ -88,6 +96,7 @@ footer {
 .parte-cima{
     display: flex;
     justify-content: space-between;
+    align-items:center;
 
 }
 .slide{
@@ -185,7 +194,7 @@ footer {
 }
 
 .pesquisa {
-    height:30px;
+    height: 31px;
     width: 600px;
     padding: 10px;
     border: 2px solid #ddd;
@@ -242,7 +251,7 @@ footer {
 
 
 </style>
-
+<!--
 <script>
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -261,7 +270,7 @@ function toggleConteudo() {
    
    </script>
 
-<!-- Isso incrivelmente nao funcionou <script>
+ Isso incrivelmente nao funcionou <script>
 const cadastro = document.querySelector ("button")
 const mostra = document.quertySelector-("formulario.php")
 
@@ -302,11 +311,6 @@ function carrocel()(
 <header>
     <nav>
 
-        <a class="barra" href="Front.php">Home</a>
-        <a class="barra" href="carrinho.php">Carrinho</a>
-        <a class="barra"  href="Login.php">Login</a>
-        </div>
-    </div>
     <div class="parte-cima">
             <div>
                 <a class="barra-logo" href="Front.php">
@@ -318,7 +322,9 @@ function carrocel()(
     </form>
        <div>
 
-   
+       <a class="link" href="Front.php">Home</a>
+        <a class="link" href="carrinho.php">Carrinho</a>
+        <a class="link"  href="Login.php">Login</a>
 
 
     </nav>
@@ -330,10 +336,12 @@ function carrocel()(
             <div class="header-bottom-side-left">
                 
             <h1>Seja bem-vindo a nossa loja</h1>
-                <p>Todos os tipos de roupas e coisa alheias voce ira achar nessa loja muito louca que eu estou criando,mas que uma loja,
-                    um quarda-roupa particular.
+                <p>Aqui, nossa paixão é proporcionar a você uma experiência de compra única e agradável.
+                     Oferecemos uma ampla variedade de produtos de alta qualidade, selecionados com carinho para atender às suas
+                      necessidades e superar suas expectativas. Nosso compromisso é com a excelência no atendimento ao cliente,
+                       preços competitivos e produtos que fazem a diferença no seu dia a dia.
                 </p>
-                <button>clica aqui pra ver</button>
+                
             </div>
             
             <div class="header-bottom-side-right">
@@ -346,72 +354,49 @@ function carrocel()(
 <div class="container" id="container">
     <h2>Nossos Produtos</h2>
     <div class="product">
-        <img src="https://tse3.mm.bing.net/th?id=OIP.sG95bbAGDVftuiktgV8NFAHaMi&pid=Api&P=0&h=180" alt="Produto 1">
-        <h3>Produto 1</h3>
-        <p>Descrição do produto 1.</p>
+        <img src="https://cea.vtexassets.com/arquivos/ids/58750822-300-360?v=638542433613300000&width=300&height=360&aspect=true" alt="Produto 1">
+        <h3>Short saia</h3>
+        <p>Jeans cintura alta com fenda azul</p>
         <p>Preço: R$ 100,00</p>
         <button onclick="addToCart('Produto 1', 100)">Comprar</button>
     </div>
     <div class="product">
-        <img src="https://i.pinimg.com/originals/56/47/fd/5647fd69e68474332a3ba3a75cbb1d3c.jpg" alt="Produto 2">
-        <h3>Produto 2</h3>
-        <p>Descrição do produto 2.</p>
+        <img src="https://cea.vtexassets.com/arquivos/ids/59097768-300-360?v=638664236149630000&width=300&height=360&aspect=true" alt="Produto 2">
+        <h3>Saia midi godê</h3>
+        <p>Jeans cintura super alta azul</p>
         <p>Preço: R$ 150,00</p>
         <button onclick="addToCart('Produto 2', 150)">Comprar</button>
     </div>
     <div class="product">
-        <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-lady-hand-drawn-clothes-hand-drawn-clothes-clothes-pattern-ladies-clothes-png-image_3822870.jpg" alt="Produto 3">
-        <h3>Produto 3</h3>
-        <p>Descrição do produto 3.</p>
+        <img src="https://cea.vtexassets.com/arquivos/ids/58399350-300-360?v=638387674029730000&width=300&height=360&aspect=true" alt="Produto 3">
+        <h3>Short</h3>
+        <p>Jeans cintura alta média barra fio azul claro</p>
         <p>Preço: R$ 200,00</p>
         <button onclick="addToCart('Produto 3', 200)">Comprar</button>
     </div>
 
     <div class="product">
-        <img src="https://tse3.mm.bing.net/th?id=OIP.sG95bbAGDVftuiktgV8NFAHaMi&pid=Api&P=0&h=180" alt="Produto 1">
-        <h3>Produto 1</h3>
-        <p>Descrição do produto 1.</p>
+        <img src="https://cea.vtexassets.com/arquivos/ids/59137298-300-360?v=638675537893230000&width=300&height=360&aspect=true" alt="Produto 4">
+        <h3>Saia Longa</h3>
+        <p>Evasê jeans com cinto azul</p>
         <p>Preço: R$ 100,00</p>
         <button onclick="addToCart('Produto 1', 100)">Comprar</button>
     </div>
     <div class="product">
-        <img src="https://i.pinimg.com/originals/56/47/fd/5647fd69e68474332a3ba3a75cbb1d3c.jpg" alt="Produto 2">
-        <h3>Produto 2</h3>
-        <p>Descrição do produto 2.</p>
+        <img src="https://cea.vtexassets.com/arquivos/ids/59118879-300-360?v=638669587534000000&width=300&height=360&aspect=true" alt="Produto 5">
+        <h3>Saia midi</h3>
+        <p>Jean godê de cor azul </p>
         <p>Preço: R$ 150,00</p>
         <button onclick="addToCart('Produto 2', 150)">Comprar</button>
     </div>
     <div class="product">
-        <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-lady-hand-drawn-clothes-hand-drawn-clothes-clothes-pattern-ladies-clothes-png-image_3822870.jpg" alt="Produto 3">
-        <h3>Produto 3</h3>
-        <p>Descrição do produto 3.</p>
+        <img src="https://cea.vtexassets.com/arquivos/ids/59131288-300-360?v=638671919174400000&width=300&height=360&aspect=true" alt="Produto 6">
+        <h3>Vestido midi</h3>
+        <p>Jean com amarração de cor azul</p>
         <p>Preço: R$ 200,00</p>
         <button onclick="addToCart('Produto 3', 200)">Comprar</button>
     </div>
     
-    <button class="ver-mais" onclick="toggleConteudo()">Ver Mais</button>
-    <div class="conteudo" id="conteudo">
-    <div class="product">
-        <img src="https://tse3.mm.bing.net/th?id=OIP.sG95bbAGDVftuiktgV8NFAHaMi&pid=Api&P=0&h=180" alt="Produto 1">
-        <h3>Produto 1</h3>
-        <p>Descrição do produto 1.</p>
-        <p>Preço: R$ 100,00</p>
-        <button onclick="addToCart('Produto 1', 100)">Comprar</button>
-    </div>
-    <div class="product">
-        <img src="https://i.pinimg.com/originals/56/47/fd/5647fd69e68474332a3ba3a75cbb1d3c.jpg" alt="Produto 2">
-        <h3>Produto 2</h3>
-        <p>Descrição do produto 2.</p>
-        <p>Preço: R$ 150,00</p>
-        <button onclick="addToCart('Produto 2', 150)">Comprar</button>
-    </div>
-    <div class="product">
-        <img src="https://png.pngtree.com/png-clipart/20190614/original/pngtree-lady-hand-drawn-clothes-hand-drawn-clothes-clothes-pattern-ladies-clothes-png-image_3822870.jpg" alt="Produto 3">
-        <h3>Produto 3</h3>
-        <p>Descrição do produto 3.</p>
-        <p>Preço: R$ 200,00</p>
-        <button onclick="addToCart('Produto 3', 200)">Comprar</button>
-    </div>
     </div>
 </div>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
-    <link rel="stylesheet" href="style_carrinho.css">
+<link rel="stylesheet" href="./Trabalho/css/index.css">
 
 </head>
 <body>
@@ -25,9 +25,9 @@
     </form>
        <div>
 
-        <a href="Front.php">Home</a>
-        <a href="carrinho.php">Carrinho</a>
-        <a href="Login.php">Login</a>
+        <a class="link" href="Front.php">Home</a>
+        <a class="link" href="carrinho.php">Carrinho</a>
+        <a class="link" href="Login.php">Login</a>
     </nav>
 </header>
 
