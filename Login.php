@@ -9,17 +9,29 @@
 </head>
 <body>
 <style>
+    body{
+        background-color:silver;
+    }
     .parte-cima{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+input{
+    font-size:15px;
+    
+}
 footer{
     color:white;
 }
+nav {
+    margin: 10px 0;
+    
+}
 .link{ color: #fff; 
      padding: 15px;
-     margin: 0 15px; text-decoration: none;
+     margin: 0 15px;
+      text-decoration: none;
       font-weight: bold; 
       border-radius: 5px; 
       transition: background-color 0.3s, color 0.3s;
@@ -49,14 +61,17 @@ body {
             min-height: 120vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image:url('venda.png');
+            background-image:url('fundo.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position:  center;
         
         }
+        header{
+            height:100px;
+        }
 header, footer {
-            background-color: black;
+            background-color: rgb(78, 78, 78);
             padding: 1rem;
             text-align: center;
         }
@@ -104,20 +119,32 @@ header, footer {
 .login-container button:hover {
             background-color: #0056b3;
         }
+
+        .parte-cima h2{
+    color:white;
+    display: inline;
+    font-size:40px;
+
+}
+.h1{
+    color:black
+}
+.barra-logo{
+    text-decoration:none;
+}
 </style>
 
 
 <header>
     <nav>
 
-<div class="parte-cima">
-        <div>
-            <a class="barra-logo" href="Front.php">
-            <img class="logotipo" src="logotype.jpeg" alt="logotipo">
-            </a>
-
-        </div>
-   <div>
+    <div class="parte-cima">
+            <div>
+                <a class="barra-logo" href="Front.php">
+                    <h2 class="h1">Fashion</h2><h2>Online</h2>
+                </a>
+            </div>
+       <div>
 
     <a class="link" href="Front.php">Home</a>
     <a class="link" href="carrinho.php">Carrinho</a>

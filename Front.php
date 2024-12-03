@@ -14,10 +14,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color:silver;
    /* background-color: #f4f4f4;*/
 }
 header {
-    background-color: black;
+
+    background-color: rgb(78, 78, 78);
    /* background: #333;
 
     color: #fff;
@@ -34,9 +36,11 @@ header nav .barra{
     border-radius: 100px;
 
 }
-.link{ color: #fff; 
+.link{ 
+    color: #fff; 
      padding: 15px;
-     margin: 0 15px; text-decoration: none;
+     margin: 0 15px; 
+     text-decoration: none;
       font-weight: bold; 
       border-radius: 5px; 
       transition: background-color 0.3s, color 0.3s;
@@ -49,13 +53,21 @@ header nav .barra{
 nav {
     margin: 10px 0;
     
+}.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os produtos uniformemente */
 }
+
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
+    overflow: ;
 }
 .product {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    margin: 10px; 
     border-radius: 10px;
     text-align: center;
     align-items: center;
@@ -100,11 +112,13 @@ footer {
 
 }
 .slide{
+
     height:500px;
     top: 60%;
     left: 50%;
     text-align: center ;
-    background-color: silver;    
+    
+    background-color: rgb(81, 88, 77);    
 }
 
 .logotipo{
@@ -123,16 +137,16 @@ footer {
 }
 .header-bottom-side-left h1{
     color: black;
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     margin-bottom:1.5rem;
 }
 .header-bottom-side-left p{
-    color: black;
+    color: white;
     line-height: 1.5rem;
     margin-bottom:1.5rem;
 }
 .header-bottom-side-left button{
-    background-color:blue;
+    background-color:rgb(47, 28, 144);
     border: none;
     cursor: pointer;
     padding: 0.8rem 3.8rem;
@@ -226,7 +240,14 @@ footer {
 }
 
 
+.parte-cima h2{
+    display: inline;
+    font-size:40px;
 
+}
+.h1{
+    color:black
+}
 
 
 
@@ -251,60 +272,7 @@ footer {
 
 
 </style>
-<!--
-<script>
 
-document.addEventListener("DOMContentLoaded", function(){
-     var conteudo = document.getElementById("conteudo"); 
-     var botao = document.getElementById("verMais"); 
-     if (localStorage.getItem("conteudoMostrado") === "true"){ 
-        conteudo.style.display = "block"; botao.style.display = "none";
-         }
-     });
-
-function toggleConteudo() { 
-    var conteudo = document.getElementById("conteudo"); 
-    var botao = document.querySelector(".ver-mais"); 
-    conteudo.style.display = "block"; 
-    botao.style.display = "none"; }
-   
-   </script>
-
- Isso incrivelmente nao funcionou <script>
-const cadastro = document.querySelector ("button")
-const mostra = document.quertySelector-("formulario.php")
-
-cadastro onclick function(){
-
-    mostra.show()
-
-}
-
-</script>
-
-
-<script>
-
-const img = document.getElementById("container");
-const img =  document.querySelectorAll("#container conteiner");
-
-let i = 0;
-
-function carrocel()(
-
-    i++;
-
-    if(i > container.length - 1){
-        i = 0;
-    };
-
-    containers.style.transform = 'translateX($(- i = 500)px)';
-
-);
-    setInterval(carrocel, 1800);
-
-</script>
--->
 
 <body>
 
@@ -314,7 +282,7 @@ function carrocel()(
     <div class="parte-cima">
             <div>
                 <a class="barra-logo" href="Front.php">
-                <img class="logotipo" src="logotype.jpeg" alt="logotipo">
+                    <h2 class="h1">Fashion</h2><h2>Online</h2>
                 </a>
             </div>
             <form class="barra-pesquisa"  action="/search" method="get">
@@ -341,7 +309,7 @@ function carrocel()(
                       necessidades e superar suas expectativas. Nosso compromisso é com a excelência no atendimento ao cliente,
                        preços competitivos e produtos que fazem a diferença no seu dia a dia.
                 </p>
-                
+                <button>VER</button>
             </div>
             
             <div class="header-bottom-side-right">
@@ -353,6 +321,7 @@ function carrocel()(
 
 <div class="container" id="container">
     <h2>Nossos Produtos</h2>
+    <div class="products">
     <div class="product">
         <img src="https://cea.vtexassets.com/arquivos/ids/58750822-300-360?v=638542433613300000&width=300&height=360&aspect=true" alt="Produto 1">
         <h3>Short saia</h3>
@@ -374,30 +343,11 @@ function carrocel()(
         <p>Preço: R$ 200,00</p>
         <button onclick="addToCart('Produto 3', 200)">Comprar</button>
     </div>
-
-    <div class="product">
-        <img src="https://cea.vtexassets.com/arquivos/ids/59137298-300-360?v=638675537893230000&width=300&height=360&aspect=true" alt="Produto 4">
-        <h3>Saia Longa</h3>
-        <p>Evasê jeans com cinto azul</p>
-        <p>Preço: R$ 100,00</p>
-        <button onclick="addToCart('Produto 1', 100)">Comprar</button>
-    </div>
-    <div class="product">
-        <img src="https://cea.vtexassets.com/arquivos/ids/59118879-300-360?v=638669587534000000&width=300&height=360&aspect=true" alt="Produto 5">
-        <h3>Saia midi</h3>
-        <p>Jean godê de cor azul </p>
-        <p>Preço: R$ 150,00</p>
-        <button onclick="addToCart('Produto 2', 150)">Comprar</button>
-    </div>
-    <div class="product">
-        <img src="https://cea.vtexassets.com/arquivos/ids/59131288-300-360?v=638671919174400000&width=300&height=360&aspect=true" alt="Produto 6">
-        <h3>Vestido midi</h3>
-        <p>Jean com amarração de cor azul</p>
-        <p>Preço: R$ 200,00</p>
-        <button onclick="addToCart('Produto 3', 200)">Comprar</button>
-    </div>
     
-    </div>
+</div>
+    
+    
+
 </div>
 
 
