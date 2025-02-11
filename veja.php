@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="trabalho/css/página/front.css">
 </head>
 <body>
-   
-<?php
 
+<?php=
 include "header.php";
 ?>
 
