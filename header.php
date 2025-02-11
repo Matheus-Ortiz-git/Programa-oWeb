@@ -24,7 +24,6 @@
         <a class="link" href="carrinho.php">Carrinho</a>
         <a class="link"  href="Login.php">Login</a>
 
-
     </nav>
 </header>
 </body>

@@ -14,7 +14,7 @@ $imagens = [
     
 ];
 ?>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carouselslide" data-ride="carousel">
     <ol class="carousel-indicators">
         <?php foreach ($imagens as $index => $imagem): ?>
             <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $index; ?>" <?php echo $index === 0 ? 'class="active"' : ''; ?>></li>
