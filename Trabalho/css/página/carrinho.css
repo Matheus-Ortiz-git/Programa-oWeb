@@ -1,34 +1,15 @@
+
+.h1{
+    color:rgb(227, 60, 60)
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color:silver;
 }
-.link{ color: #fff; 
-    padding: 15px;
-    margin: 0 15px; text-decoration: none;
-     font-weight: bold; 
-     border-radius: 5px; 
-     transition: background-color 0.3s, color 0.3s;
-    } 
-    .link:hover { 
-       background-color: #007bff; 
-       color: #fff; 
-   } 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-nav {
-    margin: 10px 0;
-}
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-}
+
+
 .container {
     width: 80%;
     margin: auto;
@@ -49,20 +30,49 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/*
+.link{ color: #fff; 
+    padding: 15px;
+    margin: 0 15px; text-decoration: none;
+     font-weight: bold; 
+     border-radius: 5px; 
+     transition: background-color 0.3s, color 0.3s;
+    } 
+    .link:hover { 
+       background-color: #007bff; 
+       color: #fff; 
+   } 
 .parte-cima{
     display: flex;
     justify-content: space-between;
     align-items:center;
 }
-.logotipo{
+    .parte-cima h2{
+    display: inline;
+    font-size:40px;
+
+}
+    header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav {
+    margin: 10px 0;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+    .logotipo{
     width: 100px;
     height: 100px;
 }
-header{
-    background-color: black;
-}
+
 .pesquisa {
-    height:30px;
+    height:31px;
     width: 600px;
     padding: 10px;
     border: 2px solid #ddd;
@@ -98,3 +108,4 @@ header{
     align-items: center;
     margin: 20px;
 }
+*/    

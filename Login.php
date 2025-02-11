@@ -9,9 +9,6 @@
 </head>
 <body>
 <style>
-    body{
-        background-color:silver;
-    }
     .parte-cima{
     display: flex;
     justify-content: space-between;

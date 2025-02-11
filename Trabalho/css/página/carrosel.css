@@ -1,0 +1,8 @@
+.carousel {
+    max-width: 300px; /* Ajuste o valor conforme necessário */
+    margin: auto; /* Centraliza o carrossel horizontalmente */
+}
+.carousel-inner img {
+    width: 100%; /* Garante que as imagens ocupem toda a largura do contêiner */
+    height: 200px; /* Mantém a proporção das imagens */
+}  
